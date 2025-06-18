@@ -1,0 +1,120 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+.container {
+  background: #1f1f1f;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 1200px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Headings */
+h1, h3 {
+  color: #fafafa;
+  margin-bottom: 24px;
+  font-weight: 600;
+  border-bottom: 2px solid #333;
+  padding-bottom: 8px;
+}
+
+/* Input and textarea styling */
+textarea,
+input {
+  width: 97%;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  background-color: #2a2a2a;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 8px;
+  resize: vertical;
+  transition: border-color 0.2s, background-color 0.3s;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+  border-color: #e63946;
+  background-color: #333;
+}
+
+/* Buttons */
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #e63946;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff4d4d;
+}
+
+button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+/* Result section */
+.result {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #2c3e50;
+  border-left: 4px solid #27ae60;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Headline list */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+li {
+  background: #2a2a2a;
+  margin-bottom: 10px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: #3a3a3a;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

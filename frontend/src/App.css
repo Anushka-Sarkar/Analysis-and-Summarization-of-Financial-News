@@ -1,0 +1,38 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Remove default link styling */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Apply consistent box sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Optional: Responsive tweaks */
+@media (max-width: 768px) {
+  html, body {
+    font-size: 15px;
+  }
+
+  #root {
+    padding: 10px;
+  }
+}
