@@ -9,7 +9,7 @@ const app = express();
 
 const allowedOrigins = [
   'http://localhost:3000',
-  'https://analysis-and-summarization-of-finan.vercel.app'
+  FRONTEND_URL
 ];
 
 app.use(cors({
