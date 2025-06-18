@@ -7,11 +7,21 @@ require('dotenv').config();
 
 const app = express();
 
-// ✅ Allow CORS only from your deployed frontend
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://analysis-and-summarization-of-finan.vercel.app'
+];
+
 app.use(cors({
-  origin: process.env.FRONTEND_URL,
-  methods: ['GET', 'POST'],
-  credentials: true
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+    return callback(new Error(`CORS policy does not allow access from origin: ${origin}`));
+  },
+  credentials: true, // optional: if using cookies/auth
 }));
 
 app.use(express.json());
