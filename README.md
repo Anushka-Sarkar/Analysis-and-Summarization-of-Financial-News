@@ -31,6 +31,7 @@ A full-stack MERN application that enables users to:
 
 ## Folder Structure
 
+```bash
 financial-news-sentiment/
 │
 ├── backend/
@@ -47,7 +48,7 @@ financial-news-sentiment/
 │       └── App.js
 │
 └── README.md
-
+```
 ---
 
 ### 📦 Installation
