@@ -1,4 +1,4 @@
-# 📊 Financial News Sentiment Analysis App
+### 📊 Financial News Sentiment Analysis App
 
 A full-stack MERN application that enables users to:
 
@@ -25,6 +25,37 @@ A full-stack MERN application that enables users to:
 📰 Headline Scraper — Fetch headlines from finance homepages
 
 🌐 News Source Buttons — Choose to visit or scrape URLs instantly
+
+---
+### 🧠 Models Used
+
+## 🔍 Sentiment Analysis
+
+The application uses a fine-tuned **DistilRoBERTa** model optimized for sentiment classification in financial contexts.
+
+- **Model:** [`mrm8488/distilroberta-finetuned-financial-news-sentiment-analysis`](https://huggingface.co/mrm8488/distilroberta-finetuned-financial-news-sentiment-analysis)
+- **Architecture:** DistilRoBERTa (a smaller, faster variant of RoBERTa)
+- **Labels:**
+  - `0`: Negative  
+  - `1`: Neutral  
+  - `2`: Positive
+- **Input:** Headline (via direct text or extracted from URL)
+- **Output:** Sentiment label with confidence scores
+
+## 📄 Summarization
+
+For abstractive summarization of long-form financial articles, the app uses Facebook AI's BART model:
+
+- **Model:** [`facebook/bart-large-cnn`](https://huggingface.co/facebook/bart-large-cnn)
+- **Architecture:** BART (Bidirectional and Auto-Regressive Transformers)
+- **Trained on:** CNN/DailyMail dataset
+- **Strengths:** Fast, high-quality summaries for long texts (e.g., scraped from news URLs)
+- **Output:** 1–3 sentence abstractive summary
+
+---
+## 🌐 **Live Demo**
+
+[Website](https://analysis-and-summarization-of-finan.vercel.app/)
 
 ---
 ## 🚀 Quick Start
@@ -109,11 +140,6 @@ The app will run locally at http://localhost:3000
 | `npm test`      | Launch the test runner                |
 | `npm run build` | Create a production build in `build/` |
 | `npm run eject` | Eject CRA config (irreversible!)      |
-
----
-## 🌐 **Live Demo**
-
-[Website](https://analysis-and-summarization-of-finan.vercel.app/)
 
 ---
 ## Interface Overview
