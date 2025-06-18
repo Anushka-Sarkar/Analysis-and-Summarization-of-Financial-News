@@ -72,6 +72,7 @@ npm install
 ```bash
 PORT=5000
 HF_API_URL=HF_API_URL=https://buchhi-fin-sentiment-api.hf.space
+FRONTEND_URL=https://analysis-and-summarization-of-finan.vercel.app
 ```
 
 ## Start backend:
@@ -82,12 +83,21 @@ npm start
 
 ## Frontend Setup:
 
+## Create a .env file in the /backend directory with:
+
+```bash
+PORT=5000
+HF_API_URL=HF_API_URL=https://buchhi-fin-sentiment-api.hf.space
+FRONTEND_URL=https://analysis-and-summarization-of-finan.vercel.app
+```
+
+## Start frontend:
 ```bash
 cd ../frontend
 npm install
 npm start
 ```
-The app will run at http://localhost:3000
+The app will run locally at http://localhost:3000 
 
 ---
 
@@ -101,7 +111,11 @@ The app will run at http://localhost:3000
 | `npm run eject` | Eject CRA config (irreversible!)      |
 
 ---
+## 🌐 **Live Demo**
 
+[Website](https://analysis-and-summarization-of-finan.vercel.app/)
+
+---
 ## Interface Overview
 Click a news source button to either open the page or scrape headlines.
 
