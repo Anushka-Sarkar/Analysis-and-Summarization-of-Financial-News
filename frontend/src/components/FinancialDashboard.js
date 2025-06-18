@@ -20,7 +20,7 @@ function FinancialDashboard() {
     console.log('Analyzing sentiment for:', inputText);
 
     try {
-      const res = await axios.post('http://localhost:5000/api/sentiment', {
+      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/sentiment`, {
         inputText,
       });
       console.log('Response from sentiment API:', res.data);
@@ -39,7 +39,7 @@ function FinancialDashboard() {
     console.log('Summarizing article:', articleText);
 
     try {
-      const res = await axios.post('http://localhost:5000/api/summarize', {
+      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/summarize`, {
         articleText,
       });
       console.log('Response from summarize API:', res.data);
@@ -58,7 +58,7 @@ function FinancialDashboard() {
     console.log('Scraping headlines from URL:', urlToUse);
 
     try {
-      const res = await axios.post('http://localhost:5000/api/scrape', {
+      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/scrape`, {
         url: urlToUse,
       });
       setHeadlines(res.data.headlines);
