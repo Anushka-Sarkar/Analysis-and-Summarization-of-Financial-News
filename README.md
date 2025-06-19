@@ -78,9 +78,17 @@ financial-news-sentiment/
 │       ├── styles/
 │       └── App.js
 │
+├── Financial_Sentiment_and_Summarization_API/
+│   ├── Dockerfile
+│   ├── financial-news-sentiment-analysis.ipynb
+│   ├── helper_prabowo_ml.py
+│   ├── main.py                      ← FastAPI app
+│   ├── requirements.txt
+│
+├── .gitignore
 └── README.md
+
 ```
----
 
 ### 📦 Installation
 
@@ -117,9 +125,7 @@ npm start
 ## Create a .env file in the /backend directory with:
 
 ```bash
-PORT=5000
-HF_API_URL=HF_API_URL=https://buchhi-fin-sentiment-api.hf.space
-FRONTEND_URL=https://analysis-and-summarization-of-finan.vercel.app
+REACT_APP_BACKEND_URL=https://analysis-and-summarization-of-financial.onrender.com
 ```
 
 ## Start frontend:
