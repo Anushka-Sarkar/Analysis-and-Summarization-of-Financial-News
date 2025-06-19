@@ -122,7 +122,7 @@ npm start
 
 ## Frontend Setup:
 
-## Create a .env file in the /backend directory with:
+## Create a .env file in the /frontend directory with:
 
 ```bash
 REACT_APP_BACKEND_URL=https://analysis-and-summarization-of-financial.onrender.com
